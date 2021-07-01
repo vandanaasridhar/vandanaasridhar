@@ -1,0 +1,26 @@
+//Learning Lists in Apex
+//Create a List and add elements to it
+List<String> colors = new List<String>{'Yellow','Blue','Green'};
+
+//Create a List and add after it has been created
+List<String> moreColors = new List<String>();
+moreColors.add('orange');
+moreColors.add('purple');
+
+public class LearningLists {
+    public static void createList(){ 
+        List<String> colors = new List<String>{'Yellow','Green','Blue'};
+        List<String>moreColors = new List<String>();
+        moreColors.add('Violet');
+        moreColors.add('Black');
+        system.debug('moreColors'+moreColors);
+        system.debug('colors'+colors);
+        String color1 = colors.get(0);
+        system.debug('color1'+color1);
+        String color2 = colors[0];
+        system.debug('color2'+color2);
+        String color3 = colors.get(1);
+        String color4 = colors[1];
+        System.assertEquals(color1, color2);
+    }
+}
